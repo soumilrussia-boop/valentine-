@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arshii 💖</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Comic Sans MS', cursive;
+  background: url("https://placekitten.com/800/1200") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card {
+  width: 90%;
+  max-width: 380px;
+  background: rgba(255,255,255,0.95);
+  padding: 30px 20px;
+  border-radius: 25px;
+  text-align: center;
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.cat {
+  font-size: 60px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 26px;
+}
+
+p {
+  font-size: 17px;
+}
+
+.buttons {
+  margin-top: 25px;
+  position: relative;
+  height: 120px;
+}
+
+button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.no {
+  background: #ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="cat">🐱💍</div>
+  <h1>Arshii 💕</h1>
+  <p>Do you wanna become<br><b>Arshii Sinha?</b> 😳💖</p>
+
+  <div class="buttons">
+    <button class="yes" onclick="yes()">YES 😍</button>
+    <button class="no" id="noBtn">NO 🙀</button>
+  </div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+function moveNo() {
+  const x = Math.random() * 60;
+  const y = Math.random() * 60;
+  noBtn.style.left = x + "%";
+  noBtn.style.top = y + "%";
+}
+
+noBtn.addEventListener("touchstart", moveNo);
+noBtn.addEventListener("mouseover", moveNo);
+
+function yes() {
+  window.location.href = "letter.html";
+}
+</script>
+
+</body>
+</html>
