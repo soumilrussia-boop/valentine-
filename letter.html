@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Arshii 💕</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#ffafcc, #ffc8dd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+}
+
+h2 {
+  color: #ff4d6d;
+}
+
+.envelope {
+  width: 260px;
+  height: 170px;
+  background: #ff4d6d;
+  border-radius: 12px;
+  position: relative;
+  animation: float 2s infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  top: -85px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 85px solid #ff758f;
+}
+
+.letter {
+  display: none;
+  background: white;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 360px;
+  animation: slideUp 1s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Tap the Envelope 💌</h2>
+
+<div class="envelope" onclick="openLetter()"></div>
+
+<div class="letter" id="letter">
+  <h2>Arshii 💕</h2>
+  <p>
+    You have no idea how special you are to me 🥺💖<br><br>
+    I promise love, loyalty,<br>
+    laughter, support,<br>
+    and endless cat memes 🐱💘<br><br>
+    Happy Valentine’s Day,<br>
+    <b>Mrs. Sinha 😌💍</b>
+  </p>
+  <div style="font-size:40px;">💞🐈‍⬛💞</div>
+</div>
+
+<!-- Music (starts after first tap) -->
+<iframe
+  src="https://www.youtube.com/embed/9fU8k5jP-6w?autoplay=1&loop=1"
+  allow="autoplay"
+  style="display:none">
+</iframe>
+
+<script>
+function openLetter() {
+  document.getElementById("letter").style.display = "block";
+}
+</script>
+
+</body>
+</html>
